@@ -1,0 +1,7 @@
+webpack_example:
+  build: .
+  command: sh -c "webpack -p --watch & nodemon app.js"
+  ports:
+    - 8080:8080
+  volumes:
+    - .:/src

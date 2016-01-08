@@ -1,5 +1,7 @@
 # webpack-example
 
+* blog post coming soon
+
 A silly app used to test how your frontend workflow
 can be much simpler through webpack rather than
 browserify / gulp.
@@ -9,22 +11,19 @@ browserify / gulp.
 You can run the app through docker:
 
 ```
-docker build -t webpack-example .
+docker-compose build
 
-docker run -ti -p 8080:8080 webpack-example
+docker-compose up
 ```
 
 or directly on your environment:
 
 ```
-# if you dont have webpack installed globally
-npm install -g webpack
+# if you dont have webpack / nodemon installed globally
+npm install -g webpack nodemon
+
+cd /path/to/webpack-example
 
 npm install
-webpack -p
-node app.js
+webpack -p --watch & nodemon app.js
 ```
-
-## Missing
-
-* reload on changes, both server and client

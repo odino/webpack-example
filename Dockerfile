@@ -2,7 +2,7 @@ FROM mhart/alpine-node:5.3.0
 
 MAINTAINER alessandro.nadalin@gmail.com
 
-RUN npm install -g webpack
+RUN npm install -g webpack nodemon
 
 COPY . /src
 WORKDIR /src
